@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		
+		   <script data-require="angular.js@1.0.7" data-semver="1.0.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script data-require="underscore.js@1.4.4" data-semver="1.4.4" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore.js"></script>
+    <script data-require="jquery@1.10.1" data-semver="1.10.1" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="ng-grid.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ng-grid.min.css" />
+    	<script src="hello.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+
+  <table>
+  <tr>
+  
+  </tr>
+  </table> <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <button ng-click = "getAllStudents()">Reload</button> <br/>
+    <div ng-show="showStudentData" class="gridStyle" ng-grid="gridOptions"></div>
+    
+   <br/> <label> <b>New Student Info </b> </label> <br/>
+    <table>
+    <tr>
+        <td> name:  </td> <td> <input type="textbox" ng-model="newStudentData.name"/> </td>
+    </tr>
+    <tr>
+        <td> Id:  </td> <td> <input type="textbox" ng-model="newStudentData.id"/> </td>
+    </tr>
+    <tr>
+        <td> Age:  </td> <td> <input type="textbox" ng-model="newStudentData.age"/> </td>
+    </tr> 
+
+  </table><br/>
+		 &nbsp;&nbsp;&nbsp;&nbsp;
+	    <button ng-click = "insertStudent()">Add Student</button> &nbsp;&nbsp;&nbsp;&nbsp;
+	     <button ng-click = "deleteStudent()">Delete Student</button>
+		
+		</div>
+	</body>
+
+	
+	
+	
+</html>
